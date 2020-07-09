@@ -6,18 +6,17 @@ using System.Threading.Tasks;
 
 namespace Cal
 {
-    class Multiplication
+    class Multiplication:ICalculator 
     {
-      public int Mul(int d, int e)
+        public int Calculation(int num1, int num2)
         {
-            int Num1=d;
-            int Num2=e;
-            int C;
-           
-            C = Num1 * Num2;
-            return C;
+            int answer;
+            answer = num1 * num2;
+            return answer;
         }
 
-      
+     
+
+
     }
 }

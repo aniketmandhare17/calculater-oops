@@ -6,44 +6,45 @@ using System.Threading.Tasks;
 
 namespace Cal
 {
-    class calculator
+    class Calculator
     {
-     public int cal1(int a,int b,int c)
+        public int Calculation(int num1, int num2, int operation)
         {
-            int p = a;
-            int q = b;
-            int r = c;
-        int result=0;
 
-          
-            if (r == 0)
-            {
-                Addition A = new Addition();
-                result = A.Add(p, q);
-                
-                
-
-            }
-            else if (r == 1)
-            {
-                Sub S = new Sub();
-                result = S.Sub1(p, q);
-            }
-            else if (r == 2)
-            {
-                Multiplication M = new Multiplication();
-                result = M.Mul(p, q);
-            }
-            else if (r == 3)
-            {
-                Division D = new Division();
-
-                result = D.Div(p, q);
-            }
-            return  result;
+            ICalculator calculator = null;
+            int result = 0;
+            calculator = GetcalculatorInstnce(operation);
+            result = calculator.Calculation(num1, num2);
+            return result;
 
         }
-        
-       
+
+        private static ICalculator GetcalculatorInstnce(int operation)
+        {
+            ICalculator calculator = null;
+            if (operation == 0)
+            {
+                calculator = new Addition();
+
+            }
+            else if (operation == 1)
+            {
+                calculator = new Sub();
+
+            }
+            else if (operation == 2)
+            {
+                calculator = new Multiplication();
+
+            }
+            else if (operation == 3)
+            {
+                calculator = new Division();
+
+
+            }
+
+            return calculator;
+        }
     }
 }

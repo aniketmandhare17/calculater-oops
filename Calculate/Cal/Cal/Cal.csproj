@@ -46,6 +46,7 @@
     <Compile Include="Addition.cs" />
     <Compile Include="calculator.cs" />
     <Compile Include="Division.cs" />
+    <Compile Include="ICalculator.cs" />
     <Compile Include="Multiplication.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

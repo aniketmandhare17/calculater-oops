@@ -6,18 +6,16 @@ using System.Threading.Tasks;
 
 namespace Cal
 {
-    class Addition
+    class Addition: ICalculator
     {
-      public  int Add(int d,int e)
-        {
-            int Num1=d;
-            int Num2=e;
-            int C;
-            
-            C = Num1 + Num2;
-            return C;
-        }
+     
 
-      
+        public int Calculation(int num1, int num2)
+        {
+
+            int answer;
+            answer = num1 + num2;
+            return answer;
+        }
     }
 }

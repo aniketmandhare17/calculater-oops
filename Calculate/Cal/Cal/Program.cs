@@ -8,25 +8,27 @@ namespace Cal
 {
     class Program
     {
-     
-       public static void Main(string[] args)
-        {
-            int Num1, Num2,z;
-            int p1;
-            Console.WriteLine("This is the Calculator Operation Program:");
 
-            Console.WriteLine("Select yours Operation:");
+        public static void Main(string[] args)
+        {
+            int num1, num2, operation;
+            int result;
+            Console.WriteLine("This is the Calculator Operation Program:");
             Console.WriteLine("Enter Yours Num1:");
-            Num1 = Convert.ToInt32(Console.ReadLine());
+            num1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter Yours Num2:");
-            Num2 = Convert.ToInt32(Console.ReadLine());
+            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Select yours Operation:");
             Console.WriteLine("0 Addition , 1 Substraction , 3 Multiplication, 4 Division");
-            z = Convert.ToInt32(Console.ReadLine());
-            calculator C = new calculator();
-           p1= C.cal1(Num1 ,Num2,z );
-            Console.WriteLine("Answer Is the :" + p1);
+            operation = Convert.ToInt32(Console.ReadLine());
+            Calculator calculator  = new Calculator();
+            result = calculator.Calculation(num1, num2, operation);
+
+            
+            Console.WriteLine("Answer Is the :" + result);
             Console.ReadLine();
         }
-        
+
     }
 }
+
